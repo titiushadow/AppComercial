@@ -6,7 +6,8 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, System.ImageList, Vcl.ImgList,
   Vcl.PlatformDefaultStyleActnCtrls, System.Actions, Vcl.ActnList, Vcl.ActnMan,
-  Vcl.ToolWin, Vcl.ActnCtrls, Vcl.ActnMenus, Vcl.CustomizeDlg, Vcl.Menus;
+  Vcl.ToolWin, Vcl.ActnCtrls, Vcl.ActnMenus, Vcl.CustomizeDlg, Vcl.Menus,
+  Vcl.ActnColorMaps, Vcl.Imaging.pngimage, Vcl.ExtCtrls;
 
 type
   TFrmComercial = class(TForm)
@@ -33,6 +34,8 @@ type
     Popup: TPopupMenu;
     CustomizeDlg: TCustomizeDlg;
     Personalizar1: TMenuItem;
+    XPColorMap1: TXPColorMap;
+    Image1: TImage;
     procedure Personalizar1Click(Sender: TObject);
   private
     { Private declarations }
