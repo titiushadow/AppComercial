@@ -1,7 +1,7 @@
 object FrmComercial: TFrmComercial
   Left = 0
   Top = 0
-  Caption = 'FrmComercial'
+  Caption = 'Sistema de Vendas'
   ClientHeight = 231
   ClientWidth = 505
   Color = clBtnFace

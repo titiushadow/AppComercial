@@ -13,6 +13,22 @@ type
     DspCliente: TDataSetProvider;
     CdsCliente: TClientDataSet;
     DsCliente: TDataSource;
+    QryProduto: TSQLQuery;
+    DpsProduto: TDataSetProvider;
+    CdsProduto: TClientDataSet;
+    DsProduto: TDataSource;
+    QryUsuario: TSQLQuery;
+    DpsUsuario: TDataSetProvider;
+    CdsUsuario: TClientDataSet;
+    DsUsuario: TDataSource;
+    QryPerfil: TSQLQuery;
+    DpsPerfil: TDataSetProvider;
+    CdsPerfil: TClientDataSet;
+    DsPerfil: TDataSource;
+    QryVendas: TSQLQuery;
+    DpsVendas: TDataSetProvider;
+    CdsVendas: TClientDataSet;
+    DsVendas: TDataSource;
   private
     { Private declarations }
   public
