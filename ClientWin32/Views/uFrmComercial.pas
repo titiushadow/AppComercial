@@ -4,10 +4,36 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, System.ImageList, Vcl.ImgList,
+  Vcl.PlatformDefaultStyleActnCtrls, System.Actions, Vcl.ActnList, Vcl.ActnMan,
+  Vcl.ToolWin, Vcl.ActnCtrls, Vcl.ActnMenus, Vcl.CustomizeDlg, Vcl.Menus;
 
 type
   TFrmComercial = class(TForm)
+    Acoes: TActionManager;
+    Images: TImageList;
+    ac_cliente: TAction;
+    ac_produto: TAction;
+    ac_usuario: TAction;
+    ac_sair: TAction;
+    ActionMainMenuBar1: TActionMainMenuBar;
+    ac_movimento_diario: TAction;
+    ac_venda: TAction;
+    ac_lista_clientes: TAction;
+    ac_vendas_por_dia: TAction;
+    ac_bloco_notas: TAction;
+    Calculadora: TAction;
+    Calendario: TAction;
+    Internet: TAction;
+    ac_perfil: TAction;
+    ac_logoff: TAction;
+    ac_help: TAction;
+    ac_sobre_sistema: TAction;
+    BarraPadrao: TActionToolBar;
+    Popup: TPopupMenu;
+    CustomizeDlg: TCustomizeDlg;
+    Personalizar1: TMenuItem;
+    procedure Personalizar1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -20,5 +46,10 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TFrmComercial.Personalizar1Click(Sender: TObject);
+begin
+  CustomizeDlg.Show;
+end;
 
 end.
