@@ -20,7 +20,7 @@ object FrmComercial: TFrmComercial
   TextHeight = 13
   object Image1: TImage
     Left = 155
-    Top = 65
+    Top = 57
     Width = 471
     Height = 383
     Anchors = [akLeft, akTop, akRight, akBottom]
@@ -684,8 +684,6 @@ object FrmComercial: TFrmComercial
     Font.Name = 'Segoe UI'
     Font.Style = []
     Spacing = 0
-    ExplicitLeft = 8
-    ExplicitWidth = 812
   end
   object BarraPadrao: TActionToolBar
     Left = 0
@@ -704,7 +702,6 @@ object FrmComercial: TFrmComercial
     ParentFont = False
     PopupMenu = Popup
     Spacing = 0
-    ExplicitTop = 31
   end
   object Acoes: TActionManager
     FileName = 'Toolbar.txt'
@@ -935,7 +932,7 @@ object FrmComercial: TFrmComercial
     Left = 24
     Top = 352
     Bitmap = {
-      494C010111001800140010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010111001800180010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000005000000001002000000000000050
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000008C898A009C999900000000000000000000000000000000000000

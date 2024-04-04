@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, System.Actions, Vcl.ActnList,
   System.ImageList, Vcl.ImgList, Vcl.ComCtrls, Vcl.ToolWin, Vcl.ExtCtrls,
-  Data.DB, Vcl.Grids, Vcl.DBGrids;
+  Data.DB, Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.Buttons;
 
 type
   TFrmModelo = class(TForm)
@@ -38,10 +38,14 @@ type
     ToolButton8: TToolButton;
     ToolButton9: TToolButton;
     ToolButton10: TToolButton;
-    tbConsulta: TTabSheet;
+    PageControl1: TPageControl;
     tbCadastro: TTabSheet;
+    tbConsulta: TTabSheet;
     Panel1: TPanel;
     DBGrid1: TDBGrid;
+    ComboBox1: TComboBox;
+    Edit1: TEdit;
+    Btn_consultar: TBitBtn;
   private
     { Private declarations }
   public
