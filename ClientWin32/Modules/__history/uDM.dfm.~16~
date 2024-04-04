@@ -52,6 +52,24 @@ object DMComercial: TDMComercial
     Left = 344
     Top = 344
   end
+  object QryCliente: TSQLQuery
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = Conexao
+    Left = 256
+    Top = 48
+  end
+  object DspCliente: TDataSetProvider
+    Left = 352
+    Top = 48
+  end
+  object CdsCliente: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DspCliente'
+    Left = 432
+    Top = 48
+  end
   object QryProduto: TSQLQuery
     Params = <>
     Left = 256
@@ -121,61 +139,5 @@ object DMComercial: TDMComercial
     ProviderName = 'DpsVendas'
     Left = 632
     Top = 264
-  end
-  object QryCliente: TSQLQuery
-    MaxBlobSize = -1
-    Params = <>
-    SQL.Strings = (
-      'SELECT * FROM CLIENTES')
-    SQLConnection = Conexao
-    Left = 256
-    Top = 48
-  end
-  object DspCliente: TDataSetProvider
-    DataSet = QryCliente
-    Left = 352
-    Top = 48
-  end
-  object CdsCliente: TClientDataSet
-    Aggregates = <>
-    Params = <>
-    ProviderName = 'DspCliente'
-    Left = 432
-    Top = 48
-    object CdsClienteCLIENTEID: TIntegerField
-      FieldName = 'CLIENTEID'
-      Required = True
-    end
-    object CdsClienteNOME: TStringField
-      FieldName = 'NOME'
-      Size = 75
-    end
-    object CdsClienteENDERECO: TStringField
-      FieldName = 'ENDERECO'
-      Size = 75
-    end
-    object CdsClienteBAIRRO: TStringField
-      FieldName = 'BAIRRO'
-    end
-    object CdsClienteCIDADE: TStringField
-      FieldName = 'CIDADE'
-    end
-    object CdsClienteCEP: TStringField
-      FieldName = 'CEP'
-      FixedChar = True
-      Size = 9
-    end
-    object CdsClienteUF: TStringField
-      FieldName = 'UF'
-      FixedChar = True
-      Size = 2
-    end
-    object CdsClienteEMAIL: TStringField
-      FieldName = 'EMAIL'
-      Size = 75
-    end
-    object CdsClienteTELEFONE: TStringField
-      FieldName = 'TELEFONE'
-    end
   end
 end

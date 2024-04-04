@@ -9,6 +9,9 @@ uses
 type
   TDMComercial = class(TDataModule)
     Conexao: TSQLConnection;
+    QryCliente: TSQLQuery;
+    DspCliente: TDataSetProvider;
+    CdsCliente: TClientDataSet;
     QryProduto: TSQLQuery;
     DpsProduto: TDataSetProvider;
     CdsProduto: TClientDataSet;
@@ -21,18 +24,6 @@ type
     QryVendas: TSQLQuery;
     DpsVendas: TDataSetProvider;
     CdsVendas: TClientDataSet;
-    QryCliente: TSQLQuery;
-    DspCliente: TDataSetProvider;
-    CdsCliente: TClientDataSet;
-    CdsClienteCLIENTEID: TIntegerField;
-    CdsClienteNOME: TStringField;
-    CdsClienteENDERECO: TStringField;
-    CdsClienteBAIRRO: TStringField;
-    CdsClienteCIDADE: TStringField;
-    CdsClienteCEP: TStringField;
-    CdsClienteUF: TStringField;
-    CdsClienteEMAIL: TStringField;
-    CdsClienteTELEFONE: TStringField;
   private
     { Private declarations }
   public

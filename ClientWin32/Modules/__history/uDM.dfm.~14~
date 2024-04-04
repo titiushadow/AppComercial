@@ -49,133 +49,119 @@ object DMComercial: TDMComercial
       'ServerCharSet='
       'Trim Char=False')
     Connected = True
-    Left = 344
-    Top = 344
+    Left = 536
+    Top = 184
+  end
+  object QryCliente: TSQLQuery
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = Conexao
+    Left = 208
+    Top = 40
+  end
+  object DspCliente: TDataSetProvider
+    Left = 288
+    Top = 40
+  end
+  object CdsCliente: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DspCliente'
+    Left = 368
+    Top = 40
+  end
+  object DsCliente: TDataSource
+    Left = 448
+    Top = 40
   end
   object QryProduto: TSQLQuery
     Params = <>
-    Left = 256
-    Top = 120
+    Left = 208
+    Top = 112
   end
   object DpsProduto: TDataSetProvider
     DataSet = QryProduto
-    Left = 352
-    Top = 120
+    Left = 288
+    Top = 112
   end
   object CdsProduto: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'DpsProduto'
-    Left = 432
-    Top = 120
+    Left = 368
+    Top = 112
+  end
+  object DsProduto: TDataSource
+    DataSet = CdsProduto
+    Left = 448
+    Top = 112
   end
   object QryUsuario: TSQLQuery
     Params = <>
-    Left = 256
-    Top = 184
+    Left = 208
+    Top = 176
   end
   object DpsUsuario: TDataSetProvider
     DataSet = QryUsuario
-    Left = 352
-    Top = 184
+    Left = 288
+    Top = 176
   end
   object CdsUsuario: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'DpsUsuario'
-    Left = 432
-    Top = 184
+    Left = 368
+    Top = 176
+  end
+  object DsUsuario: TDataSource
+    DataSet = CdsUsuario
+    Left = 448
+    Top = 176
   end
   object QryPerfil: TSQLQuery
     Params = <>
-    Left = 64
+    Left = 208
     Top = 264
   end
   object DpsPerfil: TDataSetProvider
     DataSet = QryPerfil
-    Left = 144
+    Left = 288
     Top = 264
   end
   object CdsPerfil: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'DpsPerfil'
-    Left = 224
+    Left = 368
+    Top = 264
+  end
+  object DsPerfil: TDataSource
+    DataSet = CdsPerfil
+    Left = 448
     Top = 264
   end
   object QryVendas: TSQLQuery
     MaxBlobSize = -1
     Params = <>
     SQLConnection = Conexao
-    Left = 472
-    Top = 264
+    Left = 208
+    Top = 336
   end
   object DpsVendas: TDataSetProvider
     DataSet = QryVendas
-    Left = 552
-    Top = 264
+    Left = 288
+    Top = 336
   end
   object CdsVendas: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'DpsVendas'
-    Left = 632
-    Top = 264
+    Left = 368
+    Top = 336
   end
-  object QryCliente: TSQLQuery
-    MaxBlobSize = -1
-    Params = <>
-    SQL.Strings = (
-      'SELECT * FROM CLIENTES')
-    SQLConnection = Conexao
-    Left = 256
-    Top = 48
-  end
-  object DspCliente: TDataSetProvider
-    DataSet = QryCliente
-    Left = 352
-    Top = 48
-  end
-  object CdsCliente: TClientDataSet
-    Aggregates = <>
-    Params = <>
-    ProviderName = 'DspCliente'
-    Left = 432
-    Top = 48
-    object CdsClienteCLIENTEID: TIntegerField
-      FieldName = 'CLIENTEID'
-      Required = True
-    end
-    object CdsClienteNOME: TStringField
-      FieldName = 'NOME'
-      Size = 75
-    end
-    object CdsClienteENDERECO: TStringField
-      FieldName = 'ENDERECO'
-      Size = 75
-    end
-    object CdsClienteBAIRRO: TStringField
-      FieldName = 'BAIRRO'
-    end
-    object CdsClienteCIDADE: TStringField
-      FieldName = 'CIDADE'
-    end
-    object CdsClienteCEP: TStringField
-      FieldName = 'CEP'
-      FixedChar = True
-      Size = 9
-    end
-    object CdsClienteUF: TStringField
-      FieldName = 'UF'
-      FixedChar = True
-      Size = 2
-    end
-    object CdsClienteEMAIL: TStringField
-      FieldName = 'EMAIL'
-      Size = 75
-    end
-    object CdsClienteTELEFONE: TStringField
-      FieldName = 'TELEFONE'
-    end
+  object DsVendas: TDataSource
+    DataSet = CdsVendas
+    Left = 448
+    Top = 336
   end
 end

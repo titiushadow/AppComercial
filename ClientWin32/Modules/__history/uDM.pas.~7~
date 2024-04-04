@@ -9,30 +9,26 @@ uses
 type
   TDMComercial = class(TDataModule)
     Conexao: TSQLConnection;
-    QryProduto: TSQLQuery;
-    DpsProduto: TDataSetProvider;
-    CdsProduto: TClientDataSet;
-    QryUsuario: TSQLQuery;
-    DpsUsuario: TDataSetProvider;
-    CdsUsuario: TClientDataSet;
-    QryPerfil: TSQLQuery;
-    DpsPerfil: TDataSetProvider;
-    CdsPerfil: TClientDataSet;
-    QryVendas: TSQLQuery;
-    DpsVendas: TDataSetProvider;
-    CdsVendas: TClientDataSet;
     QryCliente: TSQLQuery;
     DspCliente: TDataSetProvider;
     CdsCliente: TClientDataSet;
-    CdsClienteCLIENTEID: TIntegerField;
-    CdsClienteNOME: TStringField;
-    CdsClienteENDERECO: TStringField;
-    CdsClienteBAIRRO: TStringField;
-    CdsClienteCIDADE: TStringField;
-    CdsClienteCEP: TStringField;
-    CdsClienteUF: TStringField;
-    CdsClienteEMAIL: TStringField;
-    CdsClienteTELEFONE: TStringField;
+    DsCliente: TDataSource;
+    QryProduto: TSQLQuery;
+    DpsProduto: TDataSetProvider;
+    CdsProduto: TClientDataSet;
+    DsProduto: TDataSource;
+    QryUsuario: TSQLQuery;
+    DpsUsuario: TDataSetProvider;
+    CdsUsuario: TClientDataSet;
+    DsUsuario: TDataSource;
+    QryPerfil: TSQLQuery;
+    DpsPerfil: TDataSetProvider;
+    CdsPerfil: TClientDataSet;
+    DsPerfil: TDataSource;
+    QryVendas: TSQLQuery;
+    DpsVendas: TDataSetProvider;
+    CdsVendas: TClientDataSet;
+    DsVendas: TDataSource;
   private
     { Private declarations }
   public

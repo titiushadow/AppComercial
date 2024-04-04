@@ -24,15 +24,6 @@ type
     QryCliente: TSQLQuery;
     DspCliente: TDataSetProvider;
     CdsCliente: TClientDataSet;
-    CdsClienteCLIENTEID: TIntegerField;
-    CdsClienteNOME: TStringField;
-    CdsClienteENDERECO: TStringField;
-    CdsClienteBAIRRO: TStringField;
-    CdsClienteCIDADE: TStringField;
-    CdsClienteCEP: TStringField;
-    CdsClienteUF: TStringField;
-    CdsClienteEMAIL: TStringField;
-    CdsClienteTELEFONE: TStringField;
   private
     { Private declarations }
   public
