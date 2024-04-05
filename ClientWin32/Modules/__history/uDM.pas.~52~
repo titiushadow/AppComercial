@@ -80,14 +80,14 @@ implementation
 procedure TDMComercial.DataModuleCreate(Sender: TObject);
 var
   I: Integer;
+
 begin
   for I := 0 to Pred(ComponentCount) do
-  begin
-    if Components[I] is TClientDataSet then
-    begin
-      TClientDataSet(Components[I]).OnNewRecord := GetID;
-    end;
-  end;
+   if Components[I] is TClientDataSet then
+   begin
+    TClientDataSet(Components[I].OnNewRecord := GetID);
+   end;
+
 end;
 
 function TDMComercial.GenID(tablename: string): Integer;
@@ -96,14 +96,14 @@ var
 begin
   Qry := TSQLQuery.Create(Self);
   Qry.SQLConnection := Conexao;
-  Qry.SQL.Add('SELECT GEN_ID(GEN_'+tablename+'_ID,1) FROM RDB$DATABASE');
+  Qry.SQL.Add('SELECT GEN_ID(GEN_' + tablename + '_ID, 1) FROM RDB$DATABASE');
   Qry.Open;
   Result := Qry.Fields[0].AsInteger;
 end;
 
 procedure TDMComercial.GetID(DataSet: TDataSet);
 begin
-  DataSet.Fields[0].AsInteger := GenID(copy(DataSet.Name, 4));
+  DataSet.Fields[0].AsInteger := GenID(copy(DataSet.Name, 3));
 end;
 
 end.

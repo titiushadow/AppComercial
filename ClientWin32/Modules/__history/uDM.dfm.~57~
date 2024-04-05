@@ -1,6 +1,5 @@
 object DMComercial: TDMComercial
   OldCreateOrder = False
-  OnCreate = DataModuleCreate
   Height = 501
   Width = 824
   object Conexao: TSQLConnection
@@ -235,7 +234,6 @@ object DMComercial: TDMComercial
   end
   object CdsCliente: TClientDataSet
     Aggregates = <>
-    IndexFieldNames = 'CLIENTEID'
     Params = <>
     ProviderName = 'DspCliente'
     Left = 432

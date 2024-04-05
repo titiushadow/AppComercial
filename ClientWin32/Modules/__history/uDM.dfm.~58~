@@ -235,7 +235,6 @@ object DMComercial: TDMComercial
   end
   object CdsCliente: TClientDataSet
     Aggregates = <>
-    IndexFieldNames = 'CLIENTEID'
     Params = <>
     ProviderName = 'DspCliente'
     Left = 432

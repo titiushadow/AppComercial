@@ -1,6 +1,5 @@
 object DMComercial: TDMComercial
   OldCreateOrder = False
-  OnCreate = DataModuleCreate
   Height = 501
   Width = 824
   object Conexao: TSQLConnection
@@ -50,8 +49,8 @@ object DMComercial: TDMComercial
       'ServerCharSet='
       'Trim Char=False')
     Connected = True
-    Left = 352
-    Top = 432
+    Left = 344
+    Top = 344
   end
   object QryProduto: TSQLQuery
     MaxBlobSize = -1
@@ -149,19 +148,19 @@ object DMComercial: TDMComercial
     SQL.Strings = (
       'SELECT * FROM PERFIL')
     SQLConnection = Conexao
-    Left = 88
+    Left = 64
     Top = 264
   end
   object DpsPerfil: TDataSetProvider
     DataSet = sdsPerfil
-    Left = 152
+    Left = 168
     Top = 264
   end
   object CdsPerfil: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'DpsPerfil'
-    Left = 232
+    Left = 248
     Top = 264
     object CdsPerfilPREFILID: TIntegerField
       FieldName = 'PREFILID'
@@ -174,29 +173,26 @@ object DMComercial: TDMComercial
       FieldName = 'DESCRICAO'
       Size = 75
     end
-    object CdsPerfilsdsPerfilConf: TDataSetField
-      FieldName = 'sdsPerfilConf'
-    end
   end
-  object sdsVendas: TSQLQuery
+  object QryVendas: TSQLQuery
     MaxBlobSize = -1
     Params = <>
     SQL.Strings = (
       'SELECT * FROM VENDAS')
     SQLConnection = Conexao
-    Left = 536
+    Left = 472
     Top = 264
   end
   object DpsVendas: TDataSetProvider
-    DataSet = sdsVendas
-    Left = 616
+    DataSet = QryVendas
+    Left = 552
     Top = 264
   end
   object CdsVendas: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'DpsVendas'
-    Left = 696
+    Left = 632
     Top = 264
     object CdsVendasVENDAID: TIntegerField
       FieldName = 'VENDAID'
@@ -212,9 +208,6 @@ object DMComercial: TDMComercial
     end
     object CdsVendasDATA: TDateField
       FieldName = 'DATA'
-    end
-    object CdsVendassdsItens: TDataSetField
-      FieldName = 'sdsItens'
     end
   end
   object QryCliente: TSQLQuery
@@ -235,7 +228,6 @@ object DMComercial: TDMComercial
   end
   object CdsCliente: TClientDataSet
     Aggregates = <>
-    IndexFieldNames = 'CLIENTEID'
     Params = <>
     ProviderName = 'DspCliente'
     Left = 432
@@ -288,45 +280,18 @@ object DMComercial: TDMComercial
         ParamType = ptInput
       end>
     SQLConnection = Conexao
-    Left = 88
-    Top = 344
+    Left = 64
+    Top = 400
   end
   object DsPerfil_PerfilConf: TDataSource
     DataSet = sdsPerfil
-    Left = 32
-    Top = 304
+    Left = 64
+    Top = 336
   end
   object cdsPerfilConf: TClientDataSet
     Aggregates = <>
-    DataSetField = CdsPerfilsdsPerfilConf
     Params = <>
-    Left = 232
-    Top = 344
-  end
-  object sdsItens: TSQLDataSet
-    CommandText = 'select * from VENDAITEM WHERE VENDAID =:VENDAID'
-    DataSource = DsVenda_itens
-    MaxBlobSize = -1
-    Params = <
-      item
-        DataType = ftInteger
-        Name = 'VENDAID'
-        ParamType = ptInput
-      end>
-    SQLConnection = Conexao
-    Left = 536
-    Top = 336
-  end
-  object DsVenda_itens: TDataSource
-    DataSet = sdsVendas
-    Left = 480
-    Top = 312
-  end
-  object cdsItens: TClientDataSet
-    Aggregates = <>
-    DataSetField = CdsVendassdsItens
-    Params = <>
-    Left = 696
+    Left = 248
     Top = 336
   end
 end
