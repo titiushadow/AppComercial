@@ -127,7 +127,6 @@ object FrmModelo: TFrmModelo
           Font.Name = 'Tahoma'
           Font.Style = [fsUnderline]
           ParentFont = False
-          OnClick = Label3Click
         end
         object Campo_cbx_pesquisa: TComboBox
           Left = 14

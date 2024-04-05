@@ -59,10 +59,10 @@ type
     procedure ac_sairExecute(Sender: TObject);
     procedure ac_visualizarExecute(Sender: TObject);
     procedure ac_excluirUpdate(Sender: TObject);
+    procedure lbl_desativarClick(Sender: TObject);
     procedure ac_salvarUpdate(Sender: TObject);
     procedure Campo_pesquisaChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure Label3Click(Sender: TObject);
   private
     { Private declarations }
     protected
@@ -166,11 +166,29 @@ end;
 
 // Salvar
 procedure TFrmModelo.ac_salvarExecute(Sender: TObject);
+var
+  J: Integer;
+  CamposVazios: Boolean;
 begin
-  TClientDataSet(Ds.DataSet).ApplyUpdates(0);
-  limparFormulario;
+  CamposVazios := False;
 
-  PageControl1.ActivePage := tbConsulta;
+  // Verifica se há campos obrigatórios vazios
+  for J := 0 to ComponentCount - 1 do
+  begin
+    if (Components[J] is TEdit) and (TEdit(Components[J]).Text = '') then
+    begin
+      ShowMessage('Preencha todos os campos obrigatórios.');
+      CamposVazios := True;
+      Break;
+    end;
+  end;
+
+  if not CamposVazios then
+  begin
+    TClientDataSet(Ds.DataSet).ApplyUpdates(0);
+    limparFormulario;
+    PageControl1.ActivePage := tbConsulta;
+  end;
 end;
 
 procedure TFrmModelo.ac_salvarUpdate(Sender: TObject);
@@ -186,10 +204,9 @@ begin
 end;
 
 // Desativar filtro
-procedure TFrmModelo.Label3Click(Sender: TObject);
+procedure TFrmModelo.lbl_desativarClick(Sender: TObject);
 begin
   Ds.DataSet.Filtered := False;
-  LimparFormulario;
 end;
 
 // Limpar campos após envio

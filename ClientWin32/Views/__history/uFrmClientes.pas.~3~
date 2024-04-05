@@ -1,0 +1,37 @@
+unit uFrmClientes;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uFrmModelo, Data.DB, Vcl.Menus,
+  System.Actions, Vcl.ActnList, System.ImageList, Vcl.ImgList, Vcl.Grids,
+  Vcl.DBGrids, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, Vcl.ComCtrls,
+  Vcl.ToolWin;
+
+type
+  TFrmClientes = class(TFrmModelo)
+    procedure ac_visualizarExecute(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmClientes: TFrmClientes;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFrmClientes.ac_visualizarExecute(Sender: TObject);
+begin
+  inherited;
+  if PageControl1.ActivePage = tbConsulta then
+    PageControl1.ActivePage := tbCadastro
+  else
+    PageControl1.ActivePage := tbConsulta;
+end;
+
+end.

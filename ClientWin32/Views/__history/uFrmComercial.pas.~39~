@@ -41,7 +41,6 @@ type
     procedure ac_clienteExecute(Sender: TObject);
     procedure ac_usuarioExecute(Sender: TObject);
     procedure ac_sairExecute(Sender: TObject);
-    procedure ac_perfilExecute(Sender: TObject);
   private
     { Private declarations }
   public
@@ -55,9 +54,8 @@ implementation
 
 {$R *.dfm}
 
-uses uFrmProdutos, uFrmClientes, uFrmUsuario, uFrmPerfil;
+uses uFrmProdutos, uFrmClientes, uFrmUsuario;
 
-// Tela do Cliente
 procedure TFrmComercial.ac_clienteExecute(Sender: TObject);
 begin
   try
@@ -69,16 +67,6 @@ begin
 end;
 
 // Tela de produtos
-procedure TFrmComercial.ac_perfilExecute(Sender: TObject);
-begin
-  try
-    FrmPerfil := TFrmPerfil.Create(Self, Acoes);
-    FrmPerfil.ShowModal;
-  finally
-    FrmPerfil.Free;
-  end;
-end;
-
 procedure TFrmComercial.ac_produtoExecute(Sender: TObject);
 begin
   try

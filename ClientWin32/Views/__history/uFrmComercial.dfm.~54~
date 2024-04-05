@@ -674,7 +674,6 @@ object FrmComercial: TFrmComercial
     Top = 0
     Width = 793
     Height = 25
-    UseSystemFont = False
     ActionManager = Acoes
     Caption = 'ActionMainMenuBar1'
     Color = clMenuBar
@@ -683,7 +682,7 @@ object FrmComercial: TFrmComercial
     ColorMap.BtnSelectedFont = clBlack
     ColorMap.UnusedColor = clWhite
     Font.Charset = DEFAULT_CHARSET
-    Font.Color = clBlack
+    Font.Color = clWindowText
     Font.Height = -12
     Font.Name = 'Segoe UI'
     Font.Style = []
@@ -870,13 +869,11 @@ object FrmComercial: TFrmComercial
       Category = 'Cadastro'
       Caption = 'Usuarios'
       ImageIndex = 13
-      OnExecute = ac_usuarioExecute
     end
     object ac_sair: TAction
       Category = 'Cadastro'
       Caption = 'Sair'
       ImageIndex = 5
-      OnExecute = ac_sairExecute
     end
     object ac_movimento_diario: TAction
       Category = 'Consulta'
@@ -922,7 +919,6 @@ object FrmComercial: TFrmComercial
       Category = 'Seguran'#231'a'
       Caption = 'ac_perfil'
       ImageIndex = 13
-      OnExecute = ac_perfilExecute
     end
     object ac_logoff: TAction
       Category = 'Seguran'#231'a'
@@ -944,7 +940,7 @@ object FrmComercial: TFrmComercial
     Left = 24
     Top = 352
     Bitmap = {
-      494C0101110018002C0010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010111001800200010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000005000000001002000000000000050
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000008C898A009C999900000000000000000000000000000000000000

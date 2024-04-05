@@ -71,12 +71,7 @@ end;
 // Tela de produtos
 procedure TFrmComercial.ac_perfilExecute(Sender: TObject);
 begin
-  try
-    FrmPerfil := TFrmPerfil.Create(Self, Acoes);
-    FrmPerfil.ShowModal;
-  finally
-    FrmPerfil.Free;
-  end;
+  FrmPerfil := TFrmPerfil.Create(Self, Acoes);
 end;
 
 procedure TFrmComercial.ac_produtoExecute(Sender: TObject);

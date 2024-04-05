@@ -59,6 +59,7 @@ type
     procedure ac_sairExecute(Sender: TObject);
     procedure ac_visualizarExecute(Sender: TObject);
     procedure ac_excluirUpdate(Sender: TObject);
+    procedure lbl_desativarClick(Sender: TObject);
     procedure ac_salvarUpdate(Sender: TObject);
     procedure Campo_pesquisaChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -151,6 +152,11 @@ begin
   end;
 end;
 
+procedure TFrmModelo.Label3Click(Sender: TObject);
+begin
+  Ds.DataSet.Filtered := False;
+end;
+
 // Imprimir
 procedure TFrmModelo.ac_imprimirExecute(Sender: TObject);
 begin
@@ -186,10 +192,9 @@ begin
 end;
 
 // Desativar filtro
-procedure TFrmModelo.Label3Click(Sender: TObject);
+procedure TFrmModelo.lbl_desativarClick(Sender: TObject);
 begin
   Ds.DataSet.Filtered := False;
-  LimparFormulario;
 end;
 
 // Limpar campos após envio

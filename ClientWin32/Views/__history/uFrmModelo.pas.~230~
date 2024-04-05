@@ -189,7 +189,6 @@ end;
 procedure TFrmModelo.Label3Click(Sender: TObject);
 begin
   Ds.DataSet.Filtered := False;
-  LimparFormulario;
 end;
 
 // Limpar campos após envio
